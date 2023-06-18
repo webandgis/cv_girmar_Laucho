@@ -20,7 +20,7 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Gráficos
 const data = {
-  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Teledetección SAR - Nivel Introductorio', 'Teledetección Óptica - Nivel Introductorio','Arcgis Pro-Introducción','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
+  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Arcgis Pro-Introducción','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
   datasets: [{
     label: 'Historial Académico',
     data: [2020,2020,2020,2021,2022, 2022, 2022, 2023, 2023, 2023],
