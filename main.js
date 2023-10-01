@@ -20,10 +20,10 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Gráficos
 const data = {
-  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Arcgis Pro-Introducción','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
+  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Programación BackEnd','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
   datasets: [{
     label: 'Historial Académico',
-    data: [2020,2020,2020,2021,2022, 2022, 2022, 2023, 2023, 2023],
+    data: [2020,2020,2023,2021,2022, 2022, 2022, 2023, 2023, 2023],
     backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
       'rgba(255, 159, 64, 0.2)',
@@ -91,7 +91,7 @@ const barChart = new Chart(chartBar, {
 });
 
 const dataChart = {
-  labels: ['Técnico en Geomática', 'Ayudante de Ingeniero Agrimensor', 'Analista GIS', 'Técnico de Campo y Sistemas de Información Geográfica', 'Geocodificadora'],
+  labels: ['Analista de Datos y Técnico en Geomática', 'Técnico en Geomática', ' Analista de Datos y GIS', 'Técnico de Campo y Sistemas de Información Geográfica', 'Analista de Geomarketing'],
   datasets: [{
     label: 'Experiencia Laboral',
     data: [2023, 2020, 2019, 2018, 2015],
