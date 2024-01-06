@@ -1,5 +1,7 @@
 const mapContainter=document.querySelector('#map');
 const buttonUcv= document.querySelector('#ucv');
+const buttonUdelar=document.querySelector('#udelar')
+const buttonMtop=document.querySelector('#mtop')
 const buttonIne=document.querySelector('#ine');
 const buttonDnc= document.querySelector('#dnc');
 const buttonIgvsb=document.querySelector('#igvsb');
@@ -20,7 +22,7 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Gráficos
 const data = {
-  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Programación BackEnd','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
+  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Python-Django','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
   datasets: [{
     label: 'Historial Académico',
     data: [2020,2020,2023,2021,2022, 2022, 2022, 2023, 2023, 2023],
@@ -130,8 +132,11 @@ const barPie = new Chart(chart, {
   }
 });
 
+let udelarMarker=L.marker([-34.881465514101755, -56.11724478465528]).addTo(map).bindPopup("<h6 class='text center' >UDELAR - Facultad de Ciencias</h6><a href='https://www.fcien.edu.uy/' target='blank'><img src='img/udelar.png' width='200px'></a>")
 
 let ucvMarker = L.marker([10.491374588325108, -66.88941681125264]).addTo(map).bindPopup("<h6 class='text center' >UCV - Escuela de Geografía 2018</h6><a href='http://www.ucv.ve/estructura/facultades/facultad-de-humanidades-y-educacion/servicio-comunitario/proyectos/proyectos-ejecutados/escuela-de-geografia.html' target='blank'><img src='img/ucv.jpg' width='200px'></a>");
+
+let mtopMarker=L.marker([-34.905200741228384, -56.20420091534472]).addTo(map).bindPopup("<h6 class='text center' >MTOP</h6><a href='https://www.gub.uy/ministerio-transporte-obras-publicas/' target='blank'><img src='img/mtop.png' width='200px'></a>")
 
 let ineMarker=L.marker([-34.907650807562106, -56.20009881584393]).addTo(map).bindPopup("<h6 class='text center'>INE - Geomática</h6> <a href='https://www.ine.gub.uy/' target='blank'> <img src='img/ine.png' width='200px'></a>");
 
@@ -148,6 +153,14 @@ buttonUcv.addEventListener('click', () => {
   map.setView([10.491374588325108, -66.88941681125264],17);
 
 });
+
+buttonUdelar.addEventListener('click',()=>{
+  map.setView([-34.881465514101755, -56.11724478465528],17)
+})
+
+buttonMtop.addEventListener('click',()=>{
+  map.setView([-34.907650807562106, -56.20009881584393],17)
+})
 
 buttonIne.addEventListener('click', () =>{
   map.setView([-34.907650807562106, -56.20009881584393],17);
@@ -174,3 +187,4 @@ map.on('mousemove',function(e){
   $("#map_coords").html(str);
 }
 );
+
