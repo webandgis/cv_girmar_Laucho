@@ -7,6 +7,7 @@ const buttonDnc= document.querySelector('#dnc');
 const buttonIgvsb=document.querySelector('#igvsb');
 const buttonIntu=document.querySelector('#intu');
 const buttonIng=document.querySelector('#ing')
+const buttonUdelar_2=document.querySelector('#udelar_2')
 
 
 const map= L.map('map',{ zoomControl:false }).setView([-32.505, -56],4, zoomSnap = 0.1, zoomDelta = 0.1);
@@ -22,10 +23,10 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Gráficos
 const data = {
-  labels: ['Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Python-Django','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
+  labels: ['Data Analyst','Introducción a SQL', 'Flujos de Trabajo (Creación de Geodatabase)','Python-Django','Python-Programacíon Web', 'Getting Started with Python', 'SIG con Python en Qgis', 'React', 'JavaScript', 'Desarrollo Web',],
   datasets: [{
     label: 'Historial Académico',
-    data: [2020,2020,2023,2021,2022, 2022, 2022, 2023, 2023, 2023],
+    data: [2024,2020,2020,2023,2021,2022, 2022, 2022, 2023, 2023, 2023],
     backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
       'rgba(255, 159, 64, 0.2)',
@@ -93,10 +94,10 @@ const barChart = new Chart(chartBar, {
 });
 
 const dataChart = {
-  labels: ['Analista de Datos y Técnico en Geomática', 'Técnico en Geomática', ' Analista de Datos y GIS', 'Técnico de Campo y Sistemas de Información Geográfica', 'Analista de Geomarketing'],
+  labels: ['Consultora en Análisis de Datos Geoespaciales','Ayudante Grado I', 'Analista de Datos y Sistemas de Información Geográfica', ' Consultora en Análisis de Datos Geoespaciales', 'Analista de Datos y Sistemas de Información Geográfica '],
   datasets: [{
     label: 'Experiencia Laboral',
-    data: [2023, 2020, 2019, 2018, 2015],
+    data: [2023, 2024, 2021, 2020, 2019],
     backgroundColor: [
       'rgba(255, 205, 86, 0.2)',
       'rgba(75, 192, 192, 0.2)',
@@ -138,6 +139,8 @@ let ucvMarker = L.marker([10.491374588325108, -66.88941681125264]).addTo(map).bi
 
 let mtopMarker=L.marker([-34.905200741228384, -56.20420091534472]).addTo(map).bindPopup("<h6 class='text center' >MTOP</h6><a href='https://www.gub.uy/ministerio-transporte-obras-publicas/' target='blank'><img src='img/mtop.png' width='200px'></a>")
 
+let udelarMarker_2=L.marker([-34.881465514101755, -56.11724478465528]).addTo(map).bindPopup("<h6 class='text center' >UDELAR - Facultad de Ciencias</h6><a href='https://www.fcien.edu.uy/' target='blank'><img src='img/udelar.png' width='200px'></a>")
+
 let ineMarker=L.marker([-34.907650807562106, -56.20009881584393]).addTo(map).bindPopup("<h6 class='text center'>INE - Geomática</h6> <a href='https://www.ine.gub.uy/' target='blank'> <img src='img/ine.png' width='200px'></a>");
 
 let dncMarker=L.marker([-34.90438700326136, -56.19164238316665]).addTo(map).bindPopup("<h6 class='text center'>DNC</h6> <a href='https://www.gub.uy/ministerio-economia-finanzas/institucional-dnc' target='blank'> <img src='img/dnc.jpg' width='200px'></a>");
@@ -157,6 +160,10 @@ buttonUcv.addEventListener('click', () => {
 buttonUdelar.addEventListener('click',()=>{
   map.setView([-34.881465514101755, -56.11724478465528],17)
 })
+
+buttonUdelar_2.addEventListener('click',()=>{
+    map.setView([-34.881465514101755, -56.11724478465528],17)
+  })
 
 buttonMtop.addEventListener('click',()=>{
   map.setView([-34.907650807562106, -56.20009881584393],17)
